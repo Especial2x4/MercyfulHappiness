@@ -1,0 +1,59 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+# Pylint, flake8, or other analysis caches
+.pylint.cache
+.flake8
+# MyPy cache and build artifacts
+.mypy_cache/
+.dmypy.json
+dmypy.json
+# Virtual environment
+.venv/
+venv/
+env/
+# Environments created by poetry/pipenv/etc.
+.direnv/
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+eggs/
+*.egg-info
+*.manifest
+# Logs and database files
+*.log
+*.sqlite
+# Operating System
+.DS_Store
+# Unit test / coverage reports
+.coverage
+.tox/
+htmlcov/
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints
+# Spyder project settings
+.spyderproject
+.spyproject
+# Compiled extensions (e.g., in C)
+*.so
+# Editor/IDE specific files (VS Code, PyCharm, Sublime Text, etc.)
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# -----------------
+# Archivos específicos de usuario/desarrollo (generalmente ignorados)
+# -----------------
+# Credenciales, tokens, claves (¡NUNCA deben subirse!)
+.env
+*.key
+*.pem
+*.p12
+
+# Ficheros de datos grandes o temporales que no son esenciales para la ejecución
+data/
+tmp/

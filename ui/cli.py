@@ -1,0 +1,47 @@
+class CLI:
+    def __init__(self):
+        pass
+
+    def enter_city_name(self):
+        city_name = input("Ingresar el nombre de la ciudad: ")
+        return city_name
+    
+    def enter_instructions(self):
+        print("\n--- Acciones del Turno ---")
+        
+        # Asignar granjeros
+        asigned_farmers = int(input("Asignar granjeros desde ociosos: "))
+        
+        # Asignar obreros
+        asigned_workers = int(input("Asignar obreros desde ociosos: "))
+        
+        # Construir edificios
+        print("\n¿Construir edificio?")
+        print("1. Escuela (50 comida, 3 turnos, 2 obreros)")
+        print("2. Laboratorio (100 comida, 5 turnos, 3 obreros)")
+        print("3. Club Recreativo (30 comida, 2 turnos, 1 obrero)")
+        print("0. No construir")
+        
+        building_choice = input("Selección: ")
+        
+        # Asegurar que devuelve diccionario
+        return {
+            "farmers": asigned_farmers,
+            "workers": asigned_workers,
+            "building": building_choice
+        }
+
+    def show_report(self, report, turn):
+        print(f"\n=== Turno {turn} ===")
+        print(f"Ciudad: {report['ciudad']}")
+        print(f"👨‍👨‍👦- Población: {report['poblacion']}")
+        print(f"🧑🏻‍🌾- Granjeros: {report['granjeros']}")
+        print(f"👷‍♀️- Obreros: {report['obreros']}")
+        print(f"🧏‍♂️- Ociosos: {report['ociosos']}")
+        print(f"🥕- Comida: {report['comida']}")
+        print(f"😊- Felicidad: {report['felicidad']}")
+        print(f"💹🥕- Balance comida: {report['balance_comida']}")
+        print(f"📈👨‍👨‍👦- Crecimiento: {report['crecimiento']}")
+        print(f"🏦- Edificios en construcción: {report['edificios_en_construccion']}")
+        print(f"✅- Edificios completados: {report['edificios_completados']}")
+        print("=" * 30)
