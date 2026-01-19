@@ -1,3 +1,4 @@
+# MercyfulHappiness/ui/cli.py (actualizado)
 class CLI:
     def __init__(self):
         pass
@@ -8,6 +9,9 @@ class CLI:
     
     def enter_instructions(self):
         print("\n--- Acciones del Turno ---")
+        
+        # Opción de deshacer
+        print("u. Deshacer última acción (si está disponible)")
         
         # Asignar granjeros
         asigned_farmers = int(input("Asignar granjeros desde ociosos: "))
@@ -20,9 +24,14 @@ class CLI:
         print("1. Escuela (50 comida, 3 turnos, 2 obreros)")
         print("2. Laboratorio (100 comida, 5 turnos, 3 obreros)")
         print("3. Club Recreativo (30 comida, 2 turnos, 1 obrero)")
+        print("4. Poligono (500 comida, 5 turnos, 10 obreros)")
         print("0. No construir")
         
         building_choice = input("Selección: ")
+        
+        # Verificar si es comando especial
+        if building_choice.lower() == 'u':
+            return {"undo": True}
         
         # Asegurar que devuelve diccionario
         return {

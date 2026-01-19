@@ -1,0 +1,23 @@
+{
+    "turn": 11,
+    "city": {
+        "name": "Ciudad Dinosauresca",
+        "population": 97.0,
+        "farmers": 10,
+        "idle": 85.0,
+        "workers": 2,
+        "food": -24.0,
+        "happiness_per_capita": 0.5,
+        "happiness": 50,
+        "buildings": [
+            {
+                "name": "Escuela",
+                "food_cost": 50,
+                "build_time": 3,
+                "workers_required": 2,
+                "progress": 3,
+                "completed": true
+            }
+        ]
+    }
+}

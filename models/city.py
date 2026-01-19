@@ -15,6 +15,11 @@ class City:
         self.happiness = happiness
         self.buildings = []
         self._sync_population()
+        self.happiness_effects = {
+            "productivity": 1.0,  # Multiplicador productividad
+            "growth": 1.0,       # Multiplicador crecimiento
+            "revolt_risk": 0.0   # Riesgo de revuelta
+        }
 
     def _sync_population(self):
         """Asegura que farmers + idle + workers = population"""
@@ -55,4 +60,18 @@ class City:
             "idle": self.idle
         }
     
+    def update_happiness_effects(self):
+        """Actualizar efectos basados en felicidad"""
+        if self.happiness_per_capita < 0.3:
+            self.happiness_effects["productivity"] = 0.7
+            self.happiness_effects["growth"] = 0.5
+            self.happiness_effects["revolt_risk"] = 0.1
+        elif self.happiness_per_capita < 0.6:
+            self.happiness_effects["productivity"] = 0.9
+            self.happiness_effects["growth"] = 0.8
+            self.happiness_effects["revolt_risk"] = 0.01
+        else:
+            self.happiness_effects["productivity"] = 1.2
+            self.happiness_effects["growth"] = 1.1
+            self.happiness_effects["revolt_risk"] = 0.0
 

@@ -1,24 +1,25 @@
-
+# En config.py
 BUILDING_TYPES = {
     "escuela": {
         "name": "Escuela",
         "food_cost": 50,
         "build_time": 3,
         "workers_required": 2,
-        "effect": "aumenta_educacion"
+        "effect": {
+            "type": "education",
+            "value": 0.1,  # +10% productividad futura
+            "requires": ["teachers"]  # Nuevo tipo de trabajador
+        }
     },
     "laboratorio": {
         "name": "Laboratorio",
         "food_cost": 100,
         "build_time": 5,
         "workers_required": 3,
-        "effect": "aumenta_investigacion"
-    },
-    "club": {
-        "name": "Club Recreativo",
-        "food_cost": 30,
-        "build_time": 2,
-        "workers_required": 1,
-        "effect": "aumenta_felicidad"
+        "effect": {
+            "type": "technology",
+            "unlocks": ["advanced_farming", "medicine"],
+            "research_rate": 0.2  # +20% velocidad investigación
+        }
     }
 }
