@@ -122,4 +122,24 @@ class City:
                     completed.append(b.name)
         return completed
 
+    
+    # --------------------
+    # FELICIDAD
+    # --------------------
+    def update_happiness(self):
+        happiness = self.happiness
+
+        food_per_capita = self.food / max(1, self.population)
+
+        if food_per_capita < self.consumo_per_capita:
+            happiness -= 2
+        elif food_per_capita > self.consumo_per_capita * 2:
+            happiness += 1
+
+        for b in self.buildings:
+            if b.completed and b.name.lower() == "escuela":
+                happiness += 1
+
+        self.happiness = max(0, min(100, happiness))
+
 
