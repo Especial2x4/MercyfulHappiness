@@ -55,5 +55,4 @@ htmlcov/
 *.p12
 
 # Ficheros de datos grandes o temporales que no son esenciales para la ejecución
-data/
 tmp/

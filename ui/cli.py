@@ -13,10 +13,7 @@ class CLI:
     # Metodo para debuguear
     def show_name(self, city):
         print(f"El nombre de la ciudad es : {city.get_name()}")
-    
-    # Metodo para debuguear
-    def show_farmers(self, city):
-        print(f"La cantidad de granjeros asignados es : {city.get_farmers()}")
+
     
     def enter_instructions(self, city):
         print("\n--- Acciones del Turno ---")
