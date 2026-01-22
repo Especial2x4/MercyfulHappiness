@@ -17,7 +17,8 @@ class GameState:
                 "idle": city.idle,
                 "workers": city.workers,
                 "food": city.food,
-                "happiness_per_capita": city.happiness_per_capita   
+                "happiness_per_capita": city.happiness_per_capita,
+                "total_happiness" : city.total_happiness   
             }
         }
 

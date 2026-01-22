@@ -1,6 +1,6 @@
 # city.py - eliminar métodos redundantes
 class City:
-    def __init__(self, name, population, farmers, idle, workers, food, happiness_per_capita):
+    def __init__(self, name, population, farmers, idle, workers, food, happiness_per_capita, total_happiness):
         self.name = name
         self.population = population
         self.population_factor = 1
@@ -9,6 +9,7 @@ class City:
         self.workers = workers
         self.food = food
         self.happiness_per_capita = happiness_per_capita
+        self.total_happiness = total_happiness
 
     #===========================================================================================
     # -------------------------------- SETERS Y GETERS -----------------------------------------
@@ -52,3 +53,9 @@ class City:
 
     def get_happiness_per_capita(self):
         return self.happiness_per_capita
+    
+    def set_total_happiness(self):
+        self.total_happiness = self.happiness_per_capita * 100
+
+    def get_total_happiness(self):
+        return self.total_happiness

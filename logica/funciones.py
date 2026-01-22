@@ -60,3 +60,13 @@ def food_consumo_por_turno(city):
     # Se transforma en negativo para que se reste en el seter de city
     consumo_total_por_turno_parseado = 0 - consumo_total_por_turno
     city.set_food(consumo_total_por_turno_parseado)
+
+
+def crecimiento_de_la_poblacion(city):
+    # La población crece en un punto cuando el balance de comida es positivo y la felicidad total es mayor a 50
+    pass
+
+
+def calculo_felicidad_total(city):
+    city.set_total_happiness()
+    
